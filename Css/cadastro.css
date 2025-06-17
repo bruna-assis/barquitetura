@@ -1,0 +1,84 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container-cadastro {
+      width: 100%;
+      max-width: 500px;
+      background-color: #f4eeed;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .container-cadastro h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #999b84;
+    }
+
+    .form-cadastro label {
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-cadastro input[type="text"],
+    .form-cadastro input[type="file"],
+    .form-cadastro select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .form-cadastro button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 10px;
+      background-color: #999b84;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-cadastro button:hover {
+      background-color: #c0c2b4;
+      color: #333;
+    }
+
+    @media (max-width: 480px) {
+      .container-cadastro {
+        padding: 20px;
+      }
+
+      .container-cadastro h1 {
+        font-size: 20px;
+      }
+
+      .form-cadastro label,
+      .form-cadastro input,
+      .form-cadastro select,
+      .form-cadastro button {
+        font-size: 13px;
+      }
+    }
