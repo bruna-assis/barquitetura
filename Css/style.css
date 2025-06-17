@@ -444,6 +444,9 @@ footer {
   .projeto {
     width: 100%;
   }
+  .btn-cadastrar-imagem {
+    margin-top: 30px;
+  }
 }
 
 /* Responsivo para telas menores que 512px – ajustes finos */
