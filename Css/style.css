@@ -421,6 +421,10 @@ footer {
     gap: 15px; /* espaço entre logo e nav */
   }
 
+  .btn-cadastrar-imagem{
+    align-items: center;
+  }
+
   header img {
     width: 50px; /* ou menor, se quiser */
     height: auto;
