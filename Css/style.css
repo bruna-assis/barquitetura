@@ -405,6 +405,9 @@ footer {
   .projeto {
     width: calc(50% - 20px);
   }
+  .btn-cadastrar-imagem{
+    margin-top: 30px;
+  }
 }
 
 /* Responsivo para telas menores que 776px – header em coluna e melhorias gerais */
