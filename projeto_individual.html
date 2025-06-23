@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria B Arquitetura</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--ICONES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--IMPORTA FONTES EXTERNAS-->
+  <link rel="stylesheet" href="Css/p_individuais.css">
+  <link rel="stylesheet" href="Css/style.css">
+  <link href="Imagens/icon3.png" rel="icon">
+
+  
+</head>
+<body>
+  
+
+    <header> 
+    <div><a href="index.html"><img src="Imagens/logo.PNG" alt="logo"></a></div>
+    
+    <nav> <!--MENU DE NAVEGAÇÃO DO SITE (LINKS)-->
+      <a href="index.html#quemsomos">QUEM SOMOS NÓS</a>
+      
+      <div class="dropdown">
+        <a href="#projetos">PROJETOS</a>
+        <div class="dropdown-content">
+          <a href="projetos.html">RESIDENCIAIS</a>
+          <a href="projetos.html">COMERCIAIS</a>
+        </div>
+      </div>
+      
+      <a href="index.html#contato">CONTATO</a>
+    </nav>
+  </header>
+    
+  <div class="container">
+
+  <h1 class="nome-projeto">Projeto C&G</h1>
+  <div class="galeria">
+    <img id="imagemPrincipal" src="Imagens/Carol1.png" alt="Imagem Principal" class="imagem-principal" />
+
+    <div class="miniaturas">
+      <img src="Imagens/Carol1.png" alt="Imagem 1" onclick="trocarImagem(this)" class="ativa" />
+      <img src="Imagens/Carol2.png" alt="Imagem 2" onclick="trocarImagem(this)" />
+      <img src="Imagens/Carol3.png" alt="Imagem 3" onclick="trocarImagem(this)" />
+    </div>
+  </div>
+
+
+  </div>
+
+  <a class="whatsapp-link" href="https://wa.me/5511953751644?text=Ol%C3%A1%2C%20gostaria%20de%20realizar%20um%20or%C3%A7amento" target="_blank"> 
+      <i class="fab fa-whatsapp oi"></i>
+  </a>
+
+  <script src="Js/script.js"></script>
+
+  <footer>
+    <div class="footer-container">
+    
+    <div class="footer-cards">
+      <a href="https://www.instagram.com/b.arquitetura.rp" target="_blank" class="contact-card">
+        <i class="fab fa-instagram"></i>
+        <span>@b.arquitetura.rp</span>
+      </a>
+      <a href="mailto:barq.contato@gmail.com" class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <span>barq.contato@gmail.com</span>
+      </a>
+      <a href="https://wa.me/5511953751644" target="_blank" class="contact-card">
+        <i class="fab fa-whatsapp"></i>
+        <span>(11) 95375-1644</span>
+      </a>
+    </div>
+    <p class="copyright">© 2025 B.Arquitetura. Todos os direitos reservados.</p>
+    </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--ICONES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--IMPORTA FONTES EXTERNAS-->
+  <link rel="stylesheet" href="Css/style.css"> <!--IMPORTA O CSS-->
+
+  <link href="Imagens/icon3.png" class="icon" rel="icon">
+
+  <title>B Arquitetura</title>
+   
+  
+  
+</head>
+<body>
+  <header> 
+    <div><a href="index.html"><img src="Imagens/logo.PNG" alt="logo"></a></div>
+    
+    <nav> <!--MENU DE NAVEGAÇÃO DO SITE (LINKS)-->
+      <a href="#quemsomos">QUEM SOMOS NÓS</a>
+      
+      <div class="dropdown">
+        <a href="#projetos">PROJETOS</a>
+        <div class="dropdown-content">
+          <a href="projetos.html">RESIDENCIAIS</a>
+          <a href="projetos.html">COMERCIAIS</a>
+        </div>
+      </div>
+      
+      <a href="#contato">CONTATO</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>B Arquitetura</h1>
+    <p class="descricao">Somos um escritório de arquitetura dedicado a criar projetos que unem funcionalidade, estética e identidade. Acreditamos que cada espaço deve refletir a personalidade de quem habita, com soluções criativas, sustentáveis e bem estudadas. Seja em projetos residenciais, comerciais ou corporativos, nossa missão é transformar ideias em ambientes significativos.</p>
+    <h3>Residenciais</h3>
+    <div class="projetos" id="projetos">
+    
+      <div class="projeto">
+        <a href="projeto_individual.html" class="projeto-link">
+          <img src="Imagens/Bianca3.jpg" alt="Projeto B">
+          <div class="projeto-titulo">PROJETO B</div>
+        </a>
+      </div>
+
+      <div class="projeto">
+        <a href="projeto_individual.html" class="projeto-link">
+        <img src="Imagens/Ana3.jpg" alt="PROJETO AF">
+        <div class="projeto-titulo">PROJETO A&F</div>
+        </a>
+      </div>
+
+      <div class="projeto">
+        <a href="projeto_individual.html" class="projeto-link">
+        <img src="Imagens/Carol1.png" alt="PROJETO CG">
+        <div class="projeto-titulo">PROJETO C&G</div>
+        </a>
+      </div>
+
+    </div>
+    <div class="ver-mais"><a href="projetos.html">VER MAIS &rarr;</a></div>
+
+    <h3>Comerciais</h3>
+    <div class="projetos" id="projetos">
+
+      <div class="projeto">
+        <a href="projeto_individual.html" class="projeto-link">
+          <img src="Imagens/Omne3.png" alt="CLINICA OMNE">
+          <div class="projeto-titulo">CLÍNICA OMNE</div>
+        </a>
+      </div>
+
+      <div class="projeto">
+        <a href="projeto_individual.html" class="projeto-link">
+          <img src="Imagens/Funeraria2.jpg" alt="FUNERARIA">
+          <div class="projeto-titulo">FUNERÁRIA BETH MUTPAS</div>
+        </a>
+      </div>
+
+      <div class="projeto">
+        <a href="projeto_individual.html" class="projeto-link">
+        <img src="Imagens/Riacho2.jpg" alt="RIACHO DOCE">
+        <div class="projeto-titulo">LATICÍNIOS RIACHO DOCE</div>
+        </a>
+      </div>
+
+    </div>
+    
+    <div class="ver-mais"><a href="projetos.html">VER MAIS &rarr;</a></div>
+
+    <a href="cadastrar_img.html" class="btn-cadastrar-imagem">+ Adicionar um novo projeto</a>
+
+  </div>
+
+  <div class="quem-somos" id="quemsomos">
+    <img class="imagem-lateral" src="Imagens/imagem_bruna.png" alt="Foto da equipe">
+    <div class="conteudo-central">
+      <div class="secao-titulo">QUEM SOMOS NÓS</div>
+      
+
+        <p>Somos um escritório de arquitetura que acredita no poder transformador dos espaços. Aliamos com paixão, técnica e criatividade para desenvolver projetos que vão além da estética — entregamos soluções funcionais, personalizadas e alinhadas com as desejos e necessidades dos nossos clientes. Com uma equipe comprometida com o atendimento humanizado, buscamos inovação, sustentabilidade e a sensibilidade em cada etapa do processo, desde o estudo preliminar até a finalização dos ambientes. Atuamos em diferentes tipos de projetos, como residenciais, comerciais, corporativos e interiores, sempre com foco na excelência e no cuidado com os detalhes.</p>
+        
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <div class="formulario" id="contato">
+    <div class="secao-titulo">FORMULÁRIO DE CONTATO</div>
+    <form>
+      <input type="text" placeholder="Nome" required> <!--PLACEHOLDER: TEXTO PRE ESCRITO, REQUIRED: OBRIGATORIO ESCREVER-->
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Celular" required>
+      <button type="submit">ENVIAR</button>
+    </form>
+  </div>
+
+  <!--BOTÃO DO WHATSAPP NA TELA-->
+  <a class="whatsapp-link" href="https://wa.me/5511953751644?text=Ol%C3%A1%2C%20gostaria%20de%20realizar%20um%20or%C3%A7amento" target="_blank"> 
+      <i class="fab fa-whatsapp oi"></i>
+  </a>
+
+
+  <!--RODAPÉ-->
+  <footer>
+    <div class="footer-container">
+    
+    <div class="footer-cards">
+      <a href="https://www.instagram.com/b.arquitetura.rp" target="_blank" class="contact-card">
+        <i class="fab fa-instagram"></i>
+        <span>@b.arquitetura.rp</span>
+      </a>
+      <a href="mailto:barq.contato@gmail.com" class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <span>barq.contato@gmail.com</span>
+      </a>
+      <a href="https://wa.me/5511953751644" target="_blank" class="contact-card">
+        <i class="fab fa-whatsapp"></i>
+        <span>(11) 95375-1644</span>
+      </a>
+    </div>
+    <p class="copyright">© 2025 B.Arquitetura. Todos os direitos reservados.</p>
+    </div>
+    </footer>
+</body>
+</html>
+

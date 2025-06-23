@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Imagem</title>
+
+
+  <!-- Fontes e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="Imagens/icon3.png">
+  <link rel="stylesheet" href="Css/cadastro.css">
+</head>
+<body>
+
+  <main class="container-cadastro">
+    <h1>Cadastrar novo Projeto</h1>
+    <form action="#" method="POST" enctype="multipart/form-data" class="form-cadastro">
+      <label for="titulo">Título do projeto</label>
+      <input type="text" id="titulo" name="titulo" required />
+
+      <label for="tipoProjeto">Tipo de projeto</label>
+      <select id="tipoProjeto" name="tipoProjeto" required>
+        <option value="" disabled selected>Selecione o tipo</option>
+        <option value="residencial">Residencial</option>
+        <option value="comercial">Comercial</option>
+      </select>
+
+      <label for="imagem">Selecionar imagem</label>
+      <input type="file" id="imagem" name="imagem" accept="image/*" required />
+
+      <button type="submit">Cadastrar projeto</button>
+    </form>
+  </main>
+
+</body>
+</html>

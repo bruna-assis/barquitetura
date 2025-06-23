@@ -1,0 +1,496 @@
+/* APLICA ESTILOS GERAIS A TODOS OS ELEMENTOS DA PÁGINA */
+* {
+  box-sizing: border-box; /* INCLUI PADDING E BORDA NO CÁLCULO DA LARGURA E ALTURA TOTAL DOS ELEMENTOS */
+  margin: 0; /* REMOVE A MARGEM PADRÃO DE TODOS OS ELEMENTOS */
+  padding: 0; /* REMOVE O PADDING PADRÃO DE TODOS OS ELEMENTOS */
+  font-family: "Montserrat", sans-serif; /* DEFINE A FONTE PADRÃO */
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f4eeed; /* DEFINE A COR DE FUNDO DO CORPO DA PÁGINA */
+  color: #333; /* DEFINE A COR PADRÃO DO TEXTO COMO CINZA ESCURO */
+  padding-top: 80px; /* ADICIONA ESPAÇO NO TOPO PARA COMPENSAR O HEADER FIXO */
+}
+
+.icon{
+  object-fit: cover; /* GARANTE QUE A IMAGEM SE AJUSTE NO ESPAÇO E NÃO PERCA QUALIDADE */
+}
+
+header {
+  background-color: #999b84; /* DEFINE A COR DE FUNDO DO CABEÇALHO */
+  padding: 20px; /* ADICIONA ESPAÇAMENTO INTERNO AO HEADER */
+  display: flex; /* USA FLEXBOX PARA ORGANIZAR OS ELEMENTOS INTERNOS */
+  justify-content: space-between; /* DISTRIBUI OS ELEMENTOS COM ESPAÇO ENTRE ELES */
+  align-items: center; /* ALINHA OS ITENS VERTICALMENTE AO CENTRO */
+  flex-wrap: wrap; /* PERMITE QUE OS ITENS QUEBREM LINHA SE NECESSÁRIO */
+  position: fixed; /* FIXA O HEADER NO TOPO DA PÁGINA */
+  top: 0; /* POSICIONA O HEADER NO TOPO */
+  width: 100%; /* FAZ O HEADER OCUPAR TODA A LARGURA DA TELA */
+  z-index: 1000; /* GARANTE QUE O HEADER FIQUE ACIMA DE OUTROS ELEMENTOS */
+}
+
+header nav {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; /* CENTRALIZA OS LINKS */
+}
+
+header nav a {
+  margin: 5px 10px; /* DEFINE ESPAÇAMENTO ENTRE OS LINKS */
+  color: #f4eeed; /* COR DO TEXTO DOS LINKS */
+  text-decoration: none; /* REMOVE O SUBLINHADO DOS LINKS */
+  font-size: 14px; /* DEFINE O TAMANHO DA FONTE */
+}
+
+header nav .dropdown {
+  margin: 5px 10px; /* ESPAÇAMENTO ENTRE OS ITENS DO DROPDOWN */
+  font-size: 14px; 
+  color: #f4eeed; 
+  position: relative; /* DEFINE COMO PONTO DE REFERÊNCIA PARA O MENU SUSPENSO APARECER ABAIXO */
+}
+
+header nav .dropdown > a {
+  color: #f4eeed; 
+  text-decoration: none; 
+}
+
+header img {
+  width: 40px; /* LARGURA DA IMAGEM */
+  height: 50px; /* ALTURA DA IMAGEM */
+  object-fit: cover; 
+}
+
+
+
+#quemsomos, #contato {
+  scroll-margin-top: 100px; /* AJUSTA A POSIÇÃO DE ÂNCORAS PARA CONSIDERAR O HEADER FIXO */
+}
+
+.dropdown {
+  position: relative; 
+}
+
+.dropdown-content {
+  display: none; /* ESCONDE O MENU DROPDOWN INICIALMENTE */
+  position: absolute; 
+  background-color: #f4eeed; 
+  top: 100%; /* POSICIONA ABAIXO DO LINK PRINCIPAL */
+  left: 0;
+  min-width: 160px; /* LARGURA MÍNIMA DO MENU */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* ADICIONA SOMBRA PARA DESTACAR */
+  z-index: 1; /* FICA ACIMA DE OUTROS ELEMENTOS */
+}
+
+.dropdown-content a {
+  display: block; /* TORNA CADA LINK UM BLOCO SEPARADO */
+  padding: 10px 20px; 
+  color: #999b84; 
+  text-align: left; /* ALINHA TEXTO À ESQUERDA */
+}
+
+.dropdown-content a:hover {
+  background-color: #e0dad9; /* MUDA A COR DE FUNDO AO PASSAR O MOUSE */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* MOSTRA O DROPDOWN AO PASSAR O MOUSE */
+}
+
+.container {
+  padding: 60px 40px; 
+  text-align: left; 
+}
+
+h1 {
+  font-size: 30px; 
+  margin-bottom: 10px; /* MARGEM INFERIOR */
+  color: #74775e;
+}
+h1.titulo-tela-projetos{
+  text-align: center;
+  font-size: 4vw; /* escala conforme a largura da tela */
+  font-size: clamp(18px, 4vw, 32px);
+  padding: 0 10px;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center; /* CENTRALIZA O TEXTO */
+  color: #74775e;
+}
+
+p.descricao {
+  width: 100%; 
+  margin: 0 0 40px;
+  font-size: 17px;
+  line-height: 1.6; /* ESPAÇAMENTO ENTRE LINHAS */
+  text-align: justify;
+}
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* ESPAÇO ENTRE PROJETOS */
+  justify-content: center; 
+}
+
+.projeto {
+  position: relative;
+  width: calc(33.333% - 20px); /* DEFINE 3 ITENS POR LINHA COM ESPAÇAMENTO */
+  overflow: hidden; /* ESCONDE CONTEÚDO QUE PASSA DO CONTAINER */
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* ANIMAÇÃO SUAVE AO HOVER */
+}
+
+.projeto a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit; /* USA A COR HERDADA */
+}
+
+.projeto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.projeto:hover img {
+  transform: scale(1.05); /* AUMENTA LEVEMENTE A IMAGEM AO HOVER */
+}
+
+.projeto-titulo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* COBRE A IMAGEM TODA */
+  display: flex;
+  align-items: flex-end; /* TEXTO FICA NA PARTE INFERIOR */
+  justify-content: center;
+  padding-bottom: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 60%); /* FUNDO GRADIENTE ESCURO */
+  opacity: 0; /* ESCONDE O TEXTO */
+  transition: opacity 0.3s ease; /* ANIMAÇÃO DE APARECER */
+}
+
+.projeto:hover .projeto-titulo {
+  opacity: 1; /* MOSTRA O TEXTO AO PASSAR O MOUSE */
+}
+
+.ver-mais {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.ver-mais {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.ver-mais a {
+  color: #616352;
+  font-weight: 600; /*NEGRITO*/
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  cursor: pointer; /*CURSOR DE MAOZINHA*/
+  display: inline-block; 
+}
+
+.ver-mais a:hover {
+  color: #999b84;
+  transform: scale(1.05);
+}
+
+
+
+
+.btn-cadastrar-imagem {
+  display: inline-block;
+  background-color: #999b84;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-cadastrar-imagem:hover {
+  background-color: #c0c2b4;
+  color: #333;
+}
+
+.formulario .secao-titulo{
+  color: #74775e;
+}
+
+.secao-titulo {
+  font-weight: bold;
+  margin: 20px 0 30px;
+  font-size: 24px;
+  text-align: center;
+  
+}
+
+.quem-somos {
+  display: flex;
+  background-color: #999b84;
+  color: #f4eeed;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.quem-somos .secao-titulo {
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.imagem-lateral {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 0;
+  flex-shrink: 0; /* NÃO DEIXA A IMAGEM ENCOLHER */
+  align-self: flex-end;
+}
+
+.conteudo-central {
+  flex: 1;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.conteudo-central p{
+  text-align: justify;
+}
+
+.quem-somos-container {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.formulario {
+  background-color: #f4eeed;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+
+input {
+  padding: 10px;
+  border: 1px solid #999b84;
+  background-color: #f4eeed;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #999b84;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #999b84;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+   position: relative;
+  bottom: 0;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #f4eeed;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.contact-card i {
+  font-size: 16px;
+}
+
+.contact-card:hover {
+  color: #c0c2b4;
+}
+
+
+.copyright {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ffffffcc; /* branco com opacidade */
+  opacity: 0.9;
+}
+
+
+
+
+
+
+.whatsapp-link {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #999b84;
+  color: #f4eeed;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #504f4f;
+  z-index: 1000;
+}
+
+.whatsapp-link .fa-whatsapp {
+  margin-top: 15px;
+}
+
+
+
+
+/* Responsivo para telas menores que 1024px – 2 colunas de projetos */
+@media (max-width: 1024px) {
+  .projeto {
+    width: calc(50% - 20px);
+  }
+  .btn-cadastrar-imagem{
+    margin-top: 30px;
+  }
+}
+
+/* Responsivo para telas menores que 776px – header em coluna e melhorias gerais */
+@media (max-width: 776px) {
+  header {
+    display: flex;
+    flex-wrap: nowrap; /* não deixa quebrar a linha */
+    justify-content: flex-start; /* alinhado à esquerda */
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px; /* espaço entre logo e nav */
+  }
+
+  header img {
+    width: 50px; /* ou menor, se quiser */
+    height: auto;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  header nav a {
+    font-size: 14px;
+  }
+
+  .projeto {
+    width: 100%;
+  }
+}
+
+
+/* Responsivo para telas menores que 730px – 1 coluna de projetos */
+@media (max-width: 730px) {
+  .projeto {
+    width: 100%;
+  }
+}
+
+/* Responsivo para telas menores que 512px – ajustes finos */
+@media (max-width: 512px) {
+  header {
+    padding: 10px;
+  }
+
+  header img {
+    width: 50px;
+    height: auto;
+  }
+
+  header nav a {
+    font-size: 13px;
+  }
+
+  .quem-somos {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px;
+ 
+}
+  }
+
+  .imagem-lateral {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .conteudo-central {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contato {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .contato div {
+    width: 100%;
+  }
+
+
